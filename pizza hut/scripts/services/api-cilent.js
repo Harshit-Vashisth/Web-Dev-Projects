@@ -4,8 +4,9 @@
 // a->then
 // or 
 // b->catch
-makeNetworkCall("https://gist.githubusercontent.com/kshirsagarps/36fade16fa39202715656ef487aaf7b0/raw/2b682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json");
-async function makeNetworkCall(URL){
+// makeNetworkCall("https://gist.githubusercontent.com/kshirsagarps/36fade16fa39202715656ef487aaf7b0/raw/2b682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json");
+// export put things in object for one thing export default and all is export 
+export async function makeNetworkCall(URL){
 //     const promise=fetch(URL);
 //     // predefine method used in java 6 which is a wrapper method of xml hhtp request 
 //     promise.then((response)=>{
@@ -33,3 +34,4 @@ try{
     // await is so smart that it say that which func u have call await it handle it smothly 
     // 
 }
+export default makeNetworkCall;
