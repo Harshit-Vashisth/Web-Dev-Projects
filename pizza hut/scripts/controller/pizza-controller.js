@@ -9,8 +9,7 @@ import { getPizzas } from "../services/pizza-operations.js";
 // }
 async function printPizzas()
 {
-    getPizzas();
-    console.allPizzas=await getPizzas();
+    const allPizzas=await getPizzas();
     console.log('All Pizza',allPizzas);
 }
 printPizzas();
