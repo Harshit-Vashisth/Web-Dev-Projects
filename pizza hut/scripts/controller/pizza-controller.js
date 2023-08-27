@@ -20,31 +20,47 @@ async function printPizzas()
 
 printPizzas();
 
+function addToCart(){
+    console.log("add to cart call",this);
+    const cuurentButton=this;
+    const pizzaid=currentButton.getAttribute('')
+    console.log('Pizza-id',pizzaid);
+}
 function createCard(pizza){
-    const cardDiv=document.createElement("div");
-    cardDiv.style={width:'18 rem'}
-    cardDiv.className='card';
-    const img=document.createElement('img');
-    img.src=pizza.url;
-    img.className='card-img-top';
+    /*
+    <div class="col-4">
+
+                </div>
+    */
+   const colDiv = document.createElement('div');
+   colDiv.className = 'col-4';
+    const cardDiv = document.createElement("div");
+    cardDiv.className = 'card';
+    cardDiv.style = {width:'18rem'};
+    const img = document.createElement('img');
+    img.src = pizza.url;
+    img.className = 'card-img-top';
     cardDiv.appendChild(img);
-    const cardBody=document.createElement('div');
-    cardBody.className='card-body';
-    const h5=document.createElement('h5');
-    h5.className='card-title';
-    h5.innerText=pizza.name;
+    const cardBody = document.createElement('div');
+    cardBody.className = 'card-body';
+    const h5 = document.createElement('h5');
+    h5.className = 'card-title';
+    h5.innerText = pizza.name;
     cardBody.appendChild(h5);
     cardDiv.appendChild(cardBody);
-    const pTag=document.createElement('p');
-    pTag.className='card=text';
-    pTag.innerText=pizza.desc;
+    const pTag = document.createElement('p');
+    pTag.className = 'card-text';
+    pTag.innerText = pizza.desc;
     cardBody.appendChild(pTag);
-    const button = document.createElement('button')
-    button.className='btn btn-primary';
-    button.innerText='Add to Cart';
+    const button = document.createElement('button');
+    button.className = 'btn btn-primary';
+    //custom attribute 
+    button.setAttribute('pizza-id',pizza.id);
+    button.innerText = 'Add to Cart';
+    button.addEventListener('click',addToCart());
     cardBody.appendChild(button);
-    return cardDiv;
-
+    colDiv.appendChild(cardDiv);
+    return colDiv;
 
     // yaha humare card banege aur div me ek ek karke add
 

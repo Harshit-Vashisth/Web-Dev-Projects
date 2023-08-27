@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PizzaHut</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <!-- cdn stands for content delivery network -->
-    <!-- cdn link ki wjhse se website pr cache hojati toh opening speed inc
-     -->
-     <script type="module" src="scripts/controller/pizza-controller.js"></script>
-     <!-- //module with start the nmodules  -->
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza App</title>
+    <!-- cdn - content delivery network for css delivery -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script type="module" src="scripts/controller/pizza-controller.js"></script>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <div>
-                <!-- pizza comes here  -->
-                <h1 class="alert alert-primary" style="text-align: center;">
-                    Pizza Hut
-                </h1>
+      <header>
+        <h1 class="alert alert-secondary text-center">Pizza App</h1>
+      </header>
+      <section>
+        <div class="row">
+            <div class="col-8" >
+                <div class="row" id="pizza-output">
+                     <!-- Pizza Print Here Inside the Column-->
+                
             </div>
-        </header>
+               
+
+            </div>
+            <!-- <div class="col-4">
+                Basket will be Here
+            </div> -->
+        </div>
+        <!-- Pizza Comes here-->
         
-        <section>
-            <div class="row">
-                <div class="col-8" id="pizza-output">
-                    <!-- pizza will be here -->
-                </div>
-                <div class="col-4">
-                     basket will be here
-                </div>
-            </div>
-        </section>
-    
-        <footer>
-    
-        </footer>
+    </section>
     </div>
-    
-</body>
+    <footer></footer>
+  </body>
 </html>
