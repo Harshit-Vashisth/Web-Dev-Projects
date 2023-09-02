@@ -8,6 +8,7 @@
         this.price = price;
         this.url = url;
         this.desc = desc;
+        this.isAddedInCart = false;
     }
   }  
   export default Pizza;
