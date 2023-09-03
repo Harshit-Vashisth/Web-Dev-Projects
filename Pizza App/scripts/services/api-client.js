@@ -3,7 +3,7 @@ import { URL } from '../utils/config.js';
 export async function makeNetworkCall(){
     try{
         const response=await fetch(URL);
-        const object=await response.JSON();
+        const object=await response.json();
         return object;
     }
     catch(err){
