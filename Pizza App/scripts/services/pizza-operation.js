@@ -4,6 +4,12 @@ export const productOperation={
     products:[],
     search(pizzaId){
         const product=this.products.find(currentPizza=>currentPizza.id==pizzaId);
+        product.isAddedInCart=true;
+        console.log('Array', this.products);
+    },
+    getProductsInCart(){
+        const productInBasket=this.products.filter(product=>product.isAddedInCart);
+        return productInBasket;
     },
     async loadProducts(){
         const pizzas=await makeNetworkCall();

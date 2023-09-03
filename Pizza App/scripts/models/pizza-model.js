@@ -5,6 +5,7 @@ class Product{
        this.desc=desc;
        this.price=price;
        this.url=url;
+       this.isAddedInCart=false;  //flag
     }
 }
 export  default Product;

@@ -8,7 +8,9 @@ async function loadPizza(){
     }
 }
 loadPizza();
-
+function printBasket(){
+    const cartProduct=productOperation.getProductInCart();
+}
 function addToCart(){
     console.log("Add",this);
     const currentButton=this;
