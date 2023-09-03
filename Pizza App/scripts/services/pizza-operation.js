@@ -1,6 +1,10 @@
 import Product from "../models/pizza-model.js";
 import makeNetworkCall from "./api-client.js";
 export const productOperation={
+    products:[],
+    search(pizzaId){
+        const product=this.products.find(currentPizza=>currentPizza.id==pizzaId);
+    },
     async loadProducts(){
         const pizzas=await makeNetworkCall();
         const pizzaArray=pizzas['Vegetarian'];
@@ -10,13 +14,12 @@ export const productOperation={
             return currentPizza;
         })
         console.log(pizzaArray);
+        this.products=this.loadProducts;
         return pizzaArray;
     },
     sortProducts(){
 
     },
-    searchProducts(){
-
-    }
+    
 }
 export default productOperation;

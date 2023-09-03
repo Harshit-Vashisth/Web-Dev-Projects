@@ -1,7 +1,63 @@
 import productOperation from "../services/pizza-operation.js";
 
 async function loadPizza(){
-    const pizza=await productOperation.loadProducts();
+    const pizzas=await productOperation.loadProducts();
     console.log("PIZAA AR",pizza);
+    for(let pizza of pizzas){
+        preparePizzaCard(pizza);
+    }
 }
 loadPizza();
+
+function addToCart(){
+    console.log("Add",this);
+    const currentButton=this;
+    const pizzaId=currentButton.getAttribute('product-id');
+    console.log('Pizza',pizzaId);
+    productOperation.search(pizzaId);
+}
+/*                  <div class="col-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="https://cdn.pixabay.com/photo/2017/12/10/14/47/pizza-3010062_1280.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                          
+                    </div> */
+function preparePizzaCard(pizza){
+    const outputdiv=document.querySelector('#output');
+    const colDiv=document.createElement('div');
+    colDiv.className='col-4';
+    const cardDiv=document.createElement('div');
+    cardDiv.className='card';
+    cardDiv.style="width: 18rem;";
+    colDiv.appendChild(cardDiv);
+    const img=document.createElement('img');
+
+    img.src=pizza.url;
+    img.className='card-img-top';
+
+    cardDiv.appendChild(img);
+
+    const cardBody=document.createElement('div');
+    cardBody.className='card-body';
+    const h5=document.createElement('h5');
+    h5.className='card-title';
+    h5.innerText=pizza.name;
+    const pTag=document.createElement('p');
+    pTag.className='card-text';
+    pTag.innerText=pizza.desc;
+    const button=document.createElement('button');
+    button.innerText("Add To Cart");
+    button.className='btn btn-primary';
+    button.addEventListener('click',addToCart);
+    button.setAttribute('product-id',pizza.id);
+    cardBody.appendChild(h5);
+    cardBody.appendChild(pTag);
+    cardBody.appendChild(button);
+    outputdiv.appendChild(colDiv);
+}
+        
