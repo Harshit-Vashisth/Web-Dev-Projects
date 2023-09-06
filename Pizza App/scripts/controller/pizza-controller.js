@@ -44,6 +44,7 @@ function printItem(pizza){
     return pTag;
 }
 
+
 function addToCart(){
    // console.log('Add to Cart Call ', this);
     const currentButton = this;

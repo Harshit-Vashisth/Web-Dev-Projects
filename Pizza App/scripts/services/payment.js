@@ -1,4 +1,3 @@
-
 var options = {
     "key": "rzp_test_4LADFk2rIszuhq", // Enter the Key ID generated from the Dashboard
     "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -12,6 +11,7 @@ var options = {
         alert(response.razorpay_order_id);
         alert(response.razorpay_signature)
     },
+    
     "prefill": { //We recommend using the prefill parameter to auto-fill customer's contact information, especially their phone number
         "name": "Your Name", //your customer's name
         "email": "Your Email", 

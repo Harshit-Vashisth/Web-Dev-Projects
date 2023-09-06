@@ -2,12 +2,14 @@ import makeNetworkCall from './api-client.js';
 import {URL} from '../utils/config.js';
 import Pizza from '../models/pizza-model.js';
 
+
  const pizzaOperation = {
     pizzas:[],
     searchPizza(pizzaid){
         const pizzaObject = this.pizzas.find((pizza)=>pizza.id == pizzaid);
         pizzaObject.isAddedInCart = true;
-    },
+    }, 
+    
     async getPizzas(){
         // Api Client (Objects (Pizza))
         const data = await makeNetworkCall(URL);
