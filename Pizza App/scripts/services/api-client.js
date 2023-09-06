@@ -1,10 +1,10 @@
 
-import { URL } from '../utils/config.js';
-export async function makeNetworkCall(){
+// import { URL } from '../utils/config.js';
+ async function makeNetworkCall(URL){
     try{
         const response=await fetch(URL);
-        const object=await response.json();
-        return object;
+        const data=await response.json();
+        return data;
     }
     catch(err){
         console.log("Problem is ",err);

@@ -1,0 +1,22 @@
+.pizzahut{
+    width:8rem;
+    height:2rem;
+}
+#upper{
+    background-color: blue;
+}
+.menu{
+    font-size:1.7rem;
+    margin-left: 3rem;
+}
+
+header{
+
+}
+.alert{
+    border:border-box;
+    width: 100%;
+    display: flex;
+    margin-right: 2rem;
+    background-color: #888afa;
+}
