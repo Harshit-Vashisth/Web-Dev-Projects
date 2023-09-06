@@ -1,22 +1,79 @@
+
 .pizzahut{
-    width:8rem;
-    height:2rem;
+    width:16rem;
+    height:5rem;
 }
-#upper{
-    background-color: blue;
-}
+
 .menu{
     font-size:1.7rem;
     margin-left: 3rem;
+   padding: 10px;
+  
 }
 
 header{
-
+    width: 100%;
 }
 .alert{
-    border:border-box;
+    
     width: 100%;
-    display: flex;
+    
     margin-right: 2rem;
     background-color: #888afa;
+    display: flex;
+    
+}
+.menu:hover{
+    border:5px solid  #3ad900;
+    border-radius: 4px;
+    padding:1px;
+    font-size:2rem;
+    padding-top: 10px;
+    padding-left:3px;
+    padding-right:3px;
+}
+.container{
+  width: 100rem;
+}
+.mnu{
+    font-size:1.7rem;
+    margin-left: 24rem;
+   padding: 10px;
+}
+.mnu:hover{
+    border:5px solid  #3ad900;
+    border-radius: 4px;
+    padding:1px;
+    font-size: 2rem;
+    padding-top: 10px;
+    padding-left:3px;
+    padding-right:3px;
+}
+#rzp-button1{
+    background-color: #79fe48;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    margin-left: 19rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.bask{
+    background-color: aliceblue;
+    font-size: 1.5rem;
+     
+}
+.total{
+    background-color: rgb(218, 250, 232);
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 2rem;
+   
+     
+}
+.yourbasket{
+    font-size: 2.5rem;
+    margin-left: 6rem;
 }

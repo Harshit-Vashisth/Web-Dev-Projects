@@ -12,10 +12,12 @@ printPizzas();
 
 const printTotal=(pizzas)=>
      pizzas.reduce((sum , pizza)=>sum+parseFloat(pizza.price), 0);
-    
+
+const totalamount=0;
 
 function printBasket(){
     const basketDiv = document.getElementById('#basket');
+    const totaldiv=document.getElementById('#total');
     basketDiv.innerHTML = '';
     const pizzasInCart = pizzaOperation.pizzas.filter(pizza=>pizza.isAddedInCart);
     pizzasInCart.forEach(pizza=>{
@@ -24,13 +26,22 @@ function printBasket(){
     });
     const total = printTotal(pizzasInCart);
     console.log('Total is ', total);
+    totaldiv.innerHTML='';
+    const gst=total*0.18;
     const totalPTag = document.createElement("p");
-    totalPTag.innerText = `Total is ${total}`;
-    basketDiv.appendChild(totalPTag);
+    const gstTag = document.createElement("p");
+    gstTag.innerText = `GST : 18%`;
+    totalamount=total+gst;
+    totalPTag.innerText = `Total : ${totalamount}`;
+    totaldiv.appendChild(gstTag);
+    totaldiv.appendChild(totalPTag);
 }
 function printItem(pizza){
     const pTag = document.createElement('p');
-    pTag.innerText = `Pizza Name : ${pizza.name} Price : ${pizza.price}`;
+    
+    
+    pTag.innerText = `Pizza Name : ${pizza.name} 
+    Price: ${pizza.price}`;
     return pTag;
 }
 
@@ -93,3 +104,4 @@ function createCard(pizza){
 </div>
 */
 }
+export default totalamount;
