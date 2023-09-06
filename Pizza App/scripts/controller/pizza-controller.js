@@ -13,7 +13,6 @@ printPizzas();
 const printTotal=(pizzas)=>
      pizzas.reduce((sum , pizza)=>sum+parseFloat(pizza.price), 0);
 
-const totalamount=0;
 
 function printBasket(){
     const basketDiv = document.getElementById('#basket');
@@ -31,7 +30,7 @@ function printBasket(){
     const totalPTag = document.createElement("p");
     const gstTag = document.createElement("p");
     gstTag.innerText = `GST : 18%`;
-    totalamount=total+gst;
+    const totalamount=total+gst;
     totalPTag.innerText = `Total : ${totalamount}`;
     totaldiv.appendChild(gstTag);
     totaldiv.appendChild(totalPTag);
@@ -104,4 +103,3 @@ function createCard(pizza){
 </div>
 */
 }
-export default totalamount;
